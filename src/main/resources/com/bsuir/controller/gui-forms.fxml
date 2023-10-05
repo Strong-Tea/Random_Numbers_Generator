@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="568.0" prefWidth="800.0" style="-fx-background-color: #edf0f7;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bsuir.controller.MainFormController">
+   <children>
+      <AnchorPane layoutY="210.0" prefHeight="356.0" prefWidth="800.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label fx:id="lPeriodicity" layoutX="25.0" layoutY="35.0" text="Переодичность: " />
+            <Label fx:id="lAperiodicity" layoutX="25.0" layoutY="70.0" text="Апериодичность: " />
+            <Label fx:id="lMathExpect" layoutX="25.0" layoutY="105.0" text="Матожидание: " />
+            <Label fx:id="lVariance" layoutX="25.0" layoutY="140.0" text="Дисперсия: " />
+            <Label fx:id="lStdDeviation" layoutX="25.0" layoutY="175.0" text="СКО: " />
+         </children></AnchorPane>
+      <TextField fx:id="txR0" alignment="CENTER" layoutX="25.0" layoutY="78.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="170.0" style="-fx-background-color: #f9f8f9; -fx-prompt-text-fill: #000000;" />
+      <TextField fx:id="txM" alignment="CENTER" layoutX="218.0" layoutY="78.0" prefWidth="170.0" style="-fx-background-color: #f9f8f9; -fx-prompt-text-fill: #000000;" />
+      <TextField fx:id="txA" alignment="CENTER" layoutX="411.0" layoutY="78.0" prefWidth="170.0" style="-fx-background-color: #f9f8f9; -fx-prompt-text-fill: #000000;" />
+      <TextField fx:id="txN" alignment="CENTER" layoutX="605.0" layoutY="78.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="170.0" style="-fx-background-color: #f9f8f9; -fx-prompt-text-fill: #000000;" />
+      <Button alignment="CENTER" layoutX="218.0" layoutY="146.0" mnemonicParsing="false" onAction="#onCalculateClick" prefHeight="36.0" prefWidth="170.0" style="-fx-background-color: #ea5652;" text="Рассчитать" textFill="WHITE" />
+      <MenuButton fx:id="mbDistribution" layoutX="25.0" layoutY="152.0" mnemonicParsing="false" prefWidth="170.0" text="Распределение">
+        <items>
+            <MenuItem fx:id="miNoneDistribution" mnemonicParsing="false" onAction="#onNoneDistribution" text="Не использовать" />
+            <MenuItem fx:id="miUniformDistribution" mnemonicParsing="false" onAction="#onUniformDistribution" text="Равномерное" />
+            <MenuItem fx:id="miGaussianDistribution" mnemonicParsing="false" onAction="#onGaussianDistribution" text="Гауссовское" />
+            <MenuItem fx:id="miExponentialDistribution" mnemonicParsing="false" onAction="#onExponentialDistribution" text="Экспоненциальное" />
+            <MenuItem fx:id="miGammaDistribution" mnemonicParsing="false" onAction="#onGammaDistribution" text="Гамма" />
+            <MenuItem fx:id="miTriangularDistribution" mnemonicParsing="false" onAction="#onTriangularDistribution" text="Треугольное" />
+            <MenuItem fx:id="miSimpsonDistribution" mnemonicParsing="false" onAction="#onSimpsonDistribution" text="Симпсона" />
+        </items>
+      </MenuButton>
+      <Separator layoutX="25.0" layoutY="128.0" prefWidth="750.0" />
+      <Button alignment="CENTER" layoutX="411.0" layoutY="146.0" mnemonicParsing="false" onAction="#onBuildHistogram" prefHeight="36.0" prefWidth="170.0" style="-fx-background-color: #ea5652;" text="Гистограмма" textFill="WHITE" />
+      <Text layoutX="101.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R0" />
+      <Text layoutX="297.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="m" />
+      <Text layoutX="492.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a" />
+      <Text layoutX="686.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="n" />
+      <Text layoutX="180.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Параметры генерация случайных чисел по алгоритму Лемера">
+         <font>
+            <Font name="DejaVu Serif Condensed Bold" size="13.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

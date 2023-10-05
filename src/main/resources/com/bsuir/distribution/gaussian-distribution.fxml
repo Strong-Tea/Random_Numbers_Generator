@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="250.0" prefWidth="400.0" style="-fx-background-color: #edf0f7;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bsuir.distribution.GaussianDistribution">
+    <children>
+        <TextField fx:id="txMathExpectation" alignment="CENTER" layoutX="150.0" layoutY="48.0" onMouseClicked="#onMathExpectationTextFieldClick" promptText="m" style="-fx-background-color: #f9f8f9; -fx-prompt-text-fill: #000000;" />
+        <TextField fx:id="txStandardDeviation" alignment="CENTER" layoutX="150.0" layoutY="88.0" onMouseClicked="#onStandardDeviationTextFieldClick" promptText="σ" style="-fx-prompt-text-fill: #000000; -fx-background-color: #f9f8f9;" />
+        <Button fx:id="btSaveParameters" layoutX="150.0" layoutY="184.0" mnemonicParsing="false" onAction="#onSaveParameters" prefHeight="36.0" prefWidth="170.0" style="-fx-background-color: #ea5652;" text="Применить" textFill="WHITE" />
+        <Text layoutX="21.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Мат. ожидание" />
+        <Text layoutX="21.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="СКО" />
+      <TextField fx:id="txDistributionAccuracy" alignment="CENTER" layoutX="150.0" layoutY="128.0" onMouseClicked="#onDistributorAccuracyTextFieldClick" promptText="n" style="-fx-prompt-text-fill: #000000; -fx-background-color: #f9f8f9;" />
+      <Text layoutX="21.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Точность (6-12)" />
+    </children>
+</AnchorPane>
